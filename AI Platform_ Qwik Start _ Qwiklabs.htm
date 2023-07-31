@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://google.qwiklabs.com/focuses/581?parent=catalog&qlcampaign=1s-seattle-8293 -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" async="" src="./AI Platform_ Qwik Start _ Qwiklabs_files/js"></script><script type="text/javascript" src="./AI Platform_ Qwik Start _ Qwiklabs_files/caff0d62ed"></script><script type="text/javascript" async="" src="./AI Platform_ Qwik Start _ Qwiklabs_files/analytics.js"></script><script type="text/javascript" async="" src="./AI Platform_ Qwik Start _ Qwiklabs_files/d58fn3dh7i2n.js"></script><script src="./AI Platform_ Qwik Start _ Qwiklabs_files/nr-1153.min.js"></script><script type="text/javascript" async="" src="./AI Platform_ Qwik Start _ Qwiklabs_files/analytics.min.js"></script><script type="text/javascript" id="www-widgetapi-script" src="./AI Platform_ Qwik Start _ Qwiklabs_files/www-widgetapi.js" async=""></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"22482426","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":255,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"caff0d62ed",applicationID:"22482426"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="[]" name="active-experiments">
+<meta content="{&quot;userId&quot;:2249714}" name="help-api-product-data">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="H1p+BYkv/AuIeTRx1FPbbCOaNqxA7xX15DZHOovc+EBaTu4m08reJFZWr0fYkI5jI7nJjTTDiHnGmPv4G9j/JA==">
+<title>AI Platform: Qwik Start | Qwiklabs</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+<meta content="In this lab you train and deploy a TensorFlow model to AI Platform for serving (prediction).  Watch these short videos &amp;lt;A HREF=&quot;https://youtu.be/m0rqccviLNM&quot;&amp;gt;Harness the Power of Machine Learning with AI Platform&amp;lt;/A&amp;gt; and &amp;lt;A HREF=&quot;https://youtu.be/ZhQK0glTLg0&quot;&amp;gt;AI Platform: Qwik Start - Qwiklabs Preview&amp;lt;/A&amp;gt;." name="description">
+<meta content="Qwiklabs" name="author">
+<meta content="1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0" name="google-site-verification">
+<meta content="AI Platform: Qwik Start | Qwiklabs" property="og:title">
+<meta content="website" property="og:type">
+<meta content="/favicon-144.png" property="og:image">
+<meta content="Qwiklabs" property="og:site_name">
+<meta content="In this lab you train and deploy a TensorFlow model to AI Platform for serving (prediction).  Watch these short videos &amp;lt;A HREF=&quot;https://youtu.be/m0rqccviLNM&quot;&amp;gt;Harness the Power of Machine Learning with AI Platform&amp;lt;/A&amp;gt; and &amp;lt;A HREF=&quot;https://youtu.be/ZhQK0glTLg0&quot;&amp;gt;AI Platform: Qwik Start - Qwiklabs Preview&amp;lt;/A&amp;gt;." property="og:description">
+<meta content="/qwiklabs_logo_900x887.png" property="og:logo" size="900x887">
+<meta content="/qwiklabs_logo_994x187.png" property="og:logo" size="994x187">
+<meta content="#3681E4" property="msapplication-TileColor">
+<meta content="/favicon-144.png" property="msapplication-TileImage">
+<link href="https://google.qwiklabs.com/favicon-32.png" rel="shortcut icon">
+<link color="#3681E4" href="https://google.qwiklabs.com/favicon-svg.svg" rel="mask-icon">
+<link href="https://google.qwiklabs.com/favicon-180.png" rel="apple-touch-icon-precomposed">
+<link rel="stylesheet" media="screen" href="./AI Platform_ Qwik Start _ Qwiklabs_files/css">
+
+
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Kamil","lastname":"Kocak","fullname":"Kamil Kocak","company":"Georgia Tech","email":"kamilkocak@gmail.com","origin":"google-run, direct","subscriptions":1,"id":"e2600661e55fd3638ca8fa8dd133f596","qlCreatedAt":"2019-11-20 20:56:45 UTC","optIn":true};gon.segment="j4Im8pqIko0Lxq4wVVZWMPMM0EroHUvb";gon.deployment="google-run";
+//]]>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id="ze-snippet" src="./AI Platform_ Qwik Start _ Qwiklabs_files/snippet.js"></script><script type="text/javascript" src="./AI Platform_ Qwik Start _ Qwiklabs_files/asset_composer.2df0bd56fa46eca50c1e.js" charset="utf-8" async=""></script>
+
+
+
+<link rel="stylesheet" media="all" href="./AI Platform_ Qwik Start _ Qwiklabs_files/application-a53cf05bc9e39a99a1d6fa14f486d7ecec091bb67f0aca5b1257120cbf85ec76.css">
+<script>
+  EVENT_SOURCE_BASE_URL = "https://google-run.qwiklabs.com/nchan-sub?id=";
+</script>
+<script src="./AI Platform_ Qwik Start _ Qwiklabs_files/webcomponents-loader.js"></script>
+<script src="./AI Platform_ Qwik Start _ Qwiklabs_files/hallofmirrors-0ecc40b22ffa59a068e7d11793e27822439d8d266fcf33fd5a8cc0f562a65a1d.js"></script><script async="" src="./AI Platform_ Qwik Start _ Qwiklabs_files/lazy.min.js"></script>
+<script src="./AI Platform_ Qwik Start _ Qwiklabs_files/iframe_api"></script>
+<script src="./AI Platform_ Qwik Start _ Qwiklabs_files/vendor-45d462772c30000424907184f70c7157e95fb6227698d1671c5051818a6f60d8.js"></script>
+<script src="./AI Platform_ Qwik Start _ Qwiklabs_files/application-b19a78a33162e21e69548c829637ee074da544a00456ffbc7388e16ea7e81624.js"></script>
+</head>
+<body class="focuses focuses-show lab-show l-full no-nav">
+<div class="header-container header-container--light">
+<div class="header">
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect header__button header__button--nav header__nav-panel-button js-nav-toggle" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">menu</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header__title">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--nav" href="https://google.qwiklabs.com/quests/85?qlcampaign=1s-seattle-8293&amp;g-recaptcha-response=03AOLTBLSAjMB2omnTf9z0PoXj4NNdJ6R8taHsP6Gh0FV-sQzQpXPd6VnO6kGAyv1Zta3rvLaSKa0dM7elCEBMPKaDrXr_2Lv5m0thPCctp4eOhu4ywsLaHVTwWRMNUIrZhnsVp4DtVrZLMgvjFWXSfilNvnNFKGLvjat_ytFGkgRJUVLMvGbJXlIW9uUhOct9LKV6qKBoeeoxdvxt4Wzk5_2DsInLqqcksShABpJ8tHSrI7LGKrHzOXDdmQZW3-0rIu0tmxfP66UrcAvANzI35-DZ6q7nJ6wRcLFGbgmfRnFtP9ztcOdy2dLtr93Neo6My2fMLYJkZbl0CF29BDbvVpO_au4klXGC0jijH_IP2-l2J74yduypsM7__-7n_7o3sg-dkAoTZuGC-WVcQns8Rop2UblJN25KTGlMintGwCmgB5ajUkLtNpyJ5wn4agbCjwywjx_KPd9nmgjiEaU3562ArxO0SehEak5t-ke-PhouUWWut7mfEl45tom_tXdJzFH7DVMrWSiw" data-upgraded=",MaterialButton,MaterialRipple"><ql-icon>arrow_back</ql-icon><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<h1 class="headline-5">
+AI Platform: Qwik Start
+</h1>
+</div>
+<div class="header__actions">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--action header__button--search js-header-search-bar-button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">search</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-favorite-button favorite-button" id="CatalogItem-581-favorite-button" data-type="CatalogItem" data-id="581" data-name="AI Platform: Qwik Start" href="https://google.qwiklabs.com/favorite.json?item_id=581&amp;item_type=CatalogItem&amp;qlcampaign=1s-seattle-8293" data-upgraded=",MaterialButton,MaterialRipple" tabindex="0"><i class="material-icons">favorite_border</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a><div class="mdl-tooltip js-tooltip" for="CatalogItem-581-favorite-button" data-upgraded=",MaterialTooltip">
+Add to favorites
+</div>
+
+
+<ql-help context="lab" productdata="{&quot;userId&quot;:2249714}"></ql-help>
+<a class="header-my-account-button mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-my-account-button" data-upgraded=",MaterialButton,MaterialRipple">
+<img class="avatar " src="./AI Platform_ Qwik Start _ Qwiklabs_files/b3b349062d75cfda6b49d7d7e5c01f07.png">
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header-my-account-menu js-my-account-menu">
+<div class="card elevation-2 no-padding">
+<div class="my-account-menu__top">
+<img class="avatar " src="./AI Platform_ Qwik Start _ Qwiklabs_files/b3b349062d75cfda6b49d7d7e5c01f07.png">
+<div class="my-account-menu__info">
+<h4 class="subtitle-headline-1">
+Kamil Kocak
+</h4>
+<p class="body-2 text--gray">
+<span>kamilkocak@gmail.com</span>
+</p>
+<a class="button" href="https://google.qwiklabs.com/my_account/profile?qlcampaign=1s-seattle-8293">My Account</a>
+</div>
+</div>
+<div class="my-account-menu__bottom">
+<a class="text--green subtitle-headline-2" href="https://google.qwiklabs.com/my_account/credits?qlcampaign=1s-seattle-8293">Monthly Subscription
+</a><a class="button button--hairline" rel="nofollow" data-method="delete" href="https://google.qwiklabs.com/users/sign_out?qlcampaign=1s-seattle-8293">Sign Out</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="header__search-bar js-header-search-bar">
+<form id="catalog-search-mobile" onsubmit="ql.catalogSearchFilter(); return false;" action="https://google.qwiklabs.com/searches/elasticsearch" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="H1p+BYkv/AuIeTRx1FPbbCOaNqxA7xX15DZHOovc+EBaTu4m08reJFZWr0fYkI5jI7nJjTTDiHnGmPv4G9j/JA==">
+<input type="text" name="keywords" id="keywords" placeholder="Search" maxlength="255">
+</form>
+
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">close</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+</div>
+
+<nav class="nav-bar">
+<a class="nav-bar__item js-navigation-button" href="https://google.qwiklabs.com/?qlcampaign=1s-seattle-8293"><ql-icon class="nav-bar__item__icon">
+home
+</ql-icon>
+<span class="nav-bar__item__label">
+Home
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button  active" aria-current="page" href="https://google.qwiklabs.com/catalog?qlcampaign=1s-seattle-8293"><ql-icon class="nav-bar__item__icon">
+school
+</ql-icon>
+<span class="nav-bar__item__label">
+Catalog
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://google.qwiklabs.com/my_learning?qlcampaign=1s-seattle-8293"><ql-icon class="nav-bar__item__icon">
+event_note
+</ql-icon>
+<span class="nav-bar__item__label">
+My Learning
+</span>
+</a>
+</nav>
+
+<nav class="nav-panel js-nav-panel">
+<div class="nav-panel__logo">
+<div class="custom-logo"><img src="./AI Platform_ Qwik Start _ Qwiklabs_files/GoogleCloudTraining.svg"></div>
+</div>
+<a title="Home" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/?qlcampaign=1s-seattle-8293"><ql-icon class="nav-panel__item__icon">
+home
+</ql-icon>
+<div class="nav-panel__item__label">
+Home
+</div>
+</a>
+<a title="Catalog" tabindex="-1" class="nav-panel__item js-navigation-button active" aria-current="page" href="https://google.qwiklabs.com/catalog?qlcampaign=1s-seattle-8293"><ql-icon class="nav-panel__item__icon">
+school
+</ql-icon>
+<div class="nav-panel__item__label">
+Catalog
+</div>
+</a>
+<a title="My Learning" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/my_learning?qlcampaign=1s-seattle-8293"><ql-icon class="nav-panel__item__icon">
+event_note
+</ql-icon>
+<div class="nav-panel__item__label">
+My Learning
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a title="Profile" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/my_account/profile?qlcampaign=1s-seattle-8293"><ql-icon class="nav-panel__item__icon">
+account_circle
+</ql-icon>
+<div class="nav-panel__item__label">
+Profile
+</div>
+</a>
+<a title="Credits &amp; Subscriptions" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/my_account/credits?qlcampaign=1s-seattle-8293"><ql-icon class="nav-panel__item__icon">
+money
+</ql-icon>
+<div class="nav-panel__item__label">
+Credits &amp; Subscriptions
+</div>
+</a>
+<a title="Security" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/my_account/security?qlcampaign=1s-seattle-8293"><ql-icon class="nav-panel__item__icon">
+security
+</ql-icon>
+<div class="nav-panel__item__label">
+Security
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a class="nav-panel__item" tabindex="-1" href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#"><ql-help>
+<div class="nav-panel__help-item">
+<ql-icon class="nav-panel__item__icon">help</ql-icon>
+<div class="nav-panel__item__label">Help</div>
+</div>
+</ql-help>
+</a><div class="nav-panel__small-links">
+<a tabindex="-1" href="https://google.qwiklabs.com/privacy_policy?qlcampaign=1s-seattle-8293">Privacy</a>
+<a tabindex="-1" href="https://google.qwiklabs.com/terms_of_service?qlcampaign=1s-seattle-8293">Terms</a>
+</div>
+</nav>
+<div class="nav-panel__overlay js-nav-toggle"></div>
+
+<main class="js-main">
+<span class="hidden" id="flash-sibling-before"></span>
+
+<div class="l-main-wrapper" id="main-wrapper">
+
+
+
+
+
+
+
+<div class="js-lab-state" data-analytics-payload="{&quot;label&quot;:&quot;AI Platform: Qwik Start&quot;,&quot;lab_name&quot;:&quot;AI Platform: Qwik Start&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;google-run&quot;}" data-focus-id="581" data-lab-billing-limit="0.0" data-lab-duration="3600" data-parent="catalog" data-payment-required="" data-qlcampaign="1s-seattle-8293"></div>
+<ql-lab-control-panel class="js-lab-control-panel l-lab-control-panel" connectiondetails="[]" connectionfiles="[]" labcontrolbutton="{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}" labtimer="{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:3600}" studentresources="[{&quot;text&quot;:&quot;What is Machine Learning?&quot;,&quot;icon&quot;:&quot;videocam&quot;,&quot;href&quot;:&quot;https://www.youtube.com/watch?v=HcqpanDadyQ&quot;},{&quot;text&quot;:&quot;Harness the Power of Machine Learning with AI Platform&quot;,&quot;icon&quot;:&quot;videocam&quot;,&quot;href&quot;:&quot;https://youtu.be/m0rqccviLNM&quot;},{&quot;text&quot;:&quot;AI Platform: Qwik Start - Qwiklabs Preview&quot;,&quot;icon&quot;:&quot;videocam&quot;,&quot;href&quot;:&quot;https://youtu.be/ZhQK0glTLg0&quot;}]"></ql-lab-control-panel>
+<div class="l-lab-main-body">
+<div class="js-lab-content lab-content">
+<div class="alert alert--fake js-alert">
+<p class="alert__message js-alert-message"></p>
+<a class="alert__close js-alert-close">
+<i class="fa fa-times"></i>
+</a>
+<iframe class="l-ie-iframe-fix" src="./AI Platform_ Qwik Start _ Qwiklabs_files/saved_resource.html"></iframe>
+</div>
+<div class="lab-content__markdown-wrapper">
+<div class="lab-preamble">
+<h1 class="lab-preamble__title">
+AI Platform: Qwik Start
+</h1>
+<div class="lab-preamble__details subtitle-headline-1">
+<span>1 hour </span>
+<span>1 Credit</span>
+<div class="lab__rating">
+<a href="https://google.qwiklabs.com/focuses/581/reviews?parent=catalog&amp;qlcampaign=1s-seattle-8293"><div class="rateit" data-rateit-readonly="true" data-rateit-value="4.0086"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 64.1376px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+
+</a><a data-target="#lab-review-modal" data-toggle="modal">
+Rate Lab
+</a>
+</div>
+</div>
+</div>
+
+<div class="lab-content__inner-wrapper">
+<div class="js-markdown-instructions lab-content__markdown markdown-lab-instructions" id="markdown-lab-instructions">
+
+
+
+<h2 id="step1">GSP076</h2>
+<p><img alt="Google Cloud Self-Paced Labs" src="./AI Platform_ Qwik Start _ Qwiklabs_files/GMOHykaqmlTHiqEeQXTySaMXYPHeIvaqa2qHEzw6Occ="></p>
+
+<h2 id="step2">Overview</h2>
+<p>This lab will give you hands-on practice with <a href="http://tensorflow.org/">TensorFlow</a> model training, both locally and on <a href="https://cloud.google.com/ml-engine/docs/">AI Platform</a>. After training, you will learn how to deploy your model to AI Platform for serving (prediction). You'll train your model to predict income category of a person using the <a href="https://archive.ics.uci.edu/ml/datasets/Census+Income">United States Census Income Dataset</a>.</p>
+<p>This lab gives you an introductory, end-to-end experience of training and prediction on AI Platform. The lab will use a census dataset to:</p>
+<ul>
+<li>Create a TensorFlow training application and validate it locally.</li>
+<li>Run your training job on a single worker instance in the cloud.</li>
+<li>Run your training job as a distributed training job in the cloud.</li>
+<li>Optimize your hyperparameters by using hyperparameter tuning.</li>
+<li>Deploy a model to support prediction.</li>
+<li>Request an online prediction and see the response.</li>
+<li>Request a batch prediction.</li>
+</ul>
+<h3>What you will build</h3>
+<p>The sample builds a wide and deep model for predicting income category based on United States Census Income Dataset. The two income categories (also known as labels) are:</p>
+<ul>
+<li>
+<strong>&gt;50K</strong> — Greater than 50,000 dollars</li>
+<li>
+<strong>&lt;=50K</strong> — Less than or equal to 50,000 dollars</li>
+</ul>
+<p>Wide and deep models use deep neural nets (DNNs) to learn high-level abstractions about complex features or interactions between such features. These models then combine the outputs from the DNN with a linear regression performed on simpler features. This provides a balance between power and speed that is effective on many structured data problems.</p>
+<p>The sample defines the model using TensorFlow's prebuilt <code>DNNCombinedLinearClassifier</code> class. The sample defines the data transformations particular to the census dataset, then assigns these (potentially) transformed features to either the DNN or the linear portion of the model.</p>
+<h2 id="step3">Setup and Requirements</h2>
+<h4>Before you click the Start Lab button</h4>
+<p>Read these instructions. Labs are timed and you cannot pause them. The timer, which starts when you click Start Lab, shows how long Cloud resources will be made available to you.</p>
+<p>This Qwiklabs hands-on lab lets you do the lab activities yourself in a real cloud environment, not in a simulation or demo environment. It does so by giving you new, temporary credentials that you use to sign in and access the Google Cloud Platform for the duration of the lab.</p>
+<h4>What you need</h4>
+<p>To complete this lab, you need:</p>
+<ul>
+<li>Access to a standard internet browser (Chrome browser recommended).</li>
+<li>Time to complete the lab.</li>
+</ul>
+<p><strong><em>Note:</em></strong> If you already have your own personal GCP account or project, do not use it for this lab.</p>
+
+<h4>How to start your lab and sign in to the Console</h4>
+<ol>
+<li>
+<p>Click the <strong>Start Lab</strong> button. If you need to pay for the lab, a pop-up opens for you to select your payment method.
+On the left is a panel populated with the temporary credentials that you must use for this lab.</p>
+<p><img alt="Open Google Console" src="./AI Platform_ Qwik Start _ Qwiklabs_files/_tHp4GI5VSDyTtdqi3qDFtevuY014F88+Fow_adnRgE="></p>
+</li>
+<li>
+<p>Copy the username, and then click <strong>Open Google Console</strong>.
+The lab spins up resources, and then opens another tab that shows the <strong>Choose an account</strong> page.</p>
+<p><strong><em>Tip:</em></strong> Open the tabs in separate windows, side-by-side.</p>
+</li>
+<li>
+<p>On the Choose an account page, click <strong>Use Another Account</strong>.</p>
+<p><img alt="Choose an account" src="./AI Platform_ Qwik Start _ Qwiklabs_files/eQ6xPnPn13GjiJP3RWlHWwiMjhooHxTNvzfg1AL2WPw="></p>
+</li>
+<li>
+<p>The Sign in page opens. Paste the username that you copied from the Connection Details panel. Then copy and paste the password.</p>
+<p><strong><em>Important:</em></strong> You must use the credentials from the Connection Details panel. Do not use your Qwiklabs credentials. If you have your own GCP account, do not use it for this lab (avoids incurring charges).</p>
+</li>
+<li>
+<p>Click through the subsequent pages:</p>
+<ul>
+<li>Accept the terms and conditions.</li>
+<li>Do not add recovery options or two-factor authentication (because this is a temporary account).</li>
+<li>Do not sign up for free trials.</li>
+</ul>
+</li>
+</ol>
+<p>After a few moments, the GCP console opens in this tab.</p>
+<aside>
+<b>Note:</b> You can view the menu with a list of GCP Products and Services by clicking the <b>Navigation menu</b> at the top-left, next to “Google Cloud Platform”.
+<img alt="Cloud Console Menu" src="./AI Platform_ Qwik Start _ Qwiklabs_files/9vT7xPlxoNP_PsK0J8j0ZPFB4HnnpaIJVCDByaBrSHg=">
+</aside>
+
+<h3>Activate Google Cloud Shell</h3>
+<p>Google Cloud Shell is a virtual machine that is loaded with development tools. It offers a persistent 5GB home directory and runs on the Google Cloud.
+Google Cloud Shell provides command-line access to your GCP resources.</p>
+<ol>
+<li>
+<p>In GCP console, on the top right toolbar, click the Open Cloud Shell button.</p>
+<p><img alt="Cloud Shell icon" src="./AI Platform_ Qwik Start _ Qwiklabs_files/vdY5e_an9ZGXw5a_ZMb1agpXhRGozsOadHURcR8thAQ="></p>
+</li>
+<li>
+<p>Click <strong>Continue</strong>.
+<img alt="cloudshell_continue.png" src="./AI Platform_ Qwik Start _ Qwiklabs_files/lr3PBRjWIrJ+MQnE8kCkOnRQQVgJnWSg4UWk16f0s_A="></p>
+</li>
+</ol>
+<p>It takes a few moments to provision and connect to the environment. When you are connected, you are already authenticated, and the project is set to your <em>PROJECT_ID</em>. For example:</p>
+<p><img alt="Cloud Shell Terminal" src="./AI Platform_ Qwik Start _ Qwiklabs_files/hmMK0W41Txk+20bQyuDP9g60vCdBajIS+52iI2f4bYk="></p>
+<p><strong>gcloud</strong> is the command-line tool for Google Cloud Platform. It comes pre-installed on Cloud Shell and supports tab-completion.</p>
+<p>You can list the active account name with this command:</p>
+<pre><code>gcloud auth list
+</code><button class="button button--copy js-copy-button-0"><i class="fa fa-clipboard"></i></button></pre>
+<p>Output:</p>
+<pre><code class="language-output prettyprint prettyprinted" style=""><span class="typ">Credentialed</span><span class="pln"> accounts</span><span class="pun">:</span><span class="pln">
+ </span><span class="pun">-</span><span class="pln"> </span><span class="str">&lt;myaccount&gt;</span><span class="pun">@&lt;</span><span class="pln">mydomain</span><span class="pun">&gt;.</span><span class="pln">com </span><span class="pun">(</span><span class="pln">active</span><span class="pun">)</span></code><button class="button button--copy js-copy-button-1"><i class="fa fa-clipboard"></i></button></pre>
+<p>Example output:</p>
+<pre><code class="language-Output prettyprint prettyprinted" style=""><span class="typ">Credentialed</span><span class="pln"> accounts</span><span class="pun">:</span><span class="pln">
+ </span><span class="pun">-</span><span class="pln"> google1623327_student@qwiklabs</span><span class="pun">.</span><span class="pln">net</span></code><button class="button button--copy js-copy-button-2"><i class="fa fa-clipboard"></i></button></pre>
+<p>You can list the project ID with this command:</p>
+<pre><code>gcloud config list project
+</code><button class="button button--copy js-copy-button-3"><i class="fa fa-clipboard"></i></button></pre>
+<p>Output:</p>
+<pre><code class="language-output prettyprint prettyprinted" style=""><span class="pun">[</span><span class="pln">core</span><span class="pun">]</span><span class="pln">
+project </span><span class="pun">=</span><span class="pln"> </span><span class="str">&lt;project_ID&gt;</span></code><button class="button button--copy js-copy-button-4"><i class="fa fa-clipboard"></i></button></pre>
+<p>Example output:</p>
+<pre><code class="language-Output prettyprint prettyprinted" style=""><span class="pun">[</span><span class="pln">core</span><span class="pun">]</span><span class="pln">
+project </span><span class="pun">=</span><span class="pln"> qwiklabs</span><span class="pun">-</span><span class="pln">gcp</span><span class="pun">-</span><span class="lit">44776a13dea667a6</span></code><button class="button button--copy js-copy-button-5"><i class="fa fa-clipboard"></i></button></pre>
+<aside>
+  Full documentation of <strong>gcloud</strong> is available on <a href="https://cloud.google.com/sdk/gcloud">Google Cloud gcloud Overview</a>.
+
+</aside>
+
+<h2 id="step4">Create a virtual environment</h2>
+<p>Execute the following command to download and update the packages list.</p>
+<pre><code>sudo apt-get update
+</code><button class="button button--copy js-copy-button-6"><i class="fa fa-clipboard"></i></button></pre>
+<p>Python virtual environments are used to isolate package installation from the system.</p>
+<pre><code>sudo apt-get install virtualenv
+</code><button class="button button--copy js-copy-button-7"><i class="fa fa-clipboard"></i></button></pre>
+<ql-infobox>If prompted [Y/n], press <code>Y</code> and then <code>Enter</code>.</ql-infobox>
+<pre><code>virtualenv -p python3 venv
+</code><button class="button button--copy js-copy-button-8"><i class="fa fa-clipboard"></i></button></pre>
+<p>Activate the virtual environment.</p>
+<pre><code>source venv/bin/activate
+</code><button class="button button--copy js-copy-button-9"><i class="fa fa-clipboard"></i></button></pre>
+
+<h2 id="step5">Clone the example repo</h2>
+<p>In Cloud Shell run the following command to clone the <a href="https://github.com/GoogleCloudPlatform/cloudml-samples">cloudml-samples repo</a>:</p>
+<pre><code>git clone https://github.com/GoogleCloudPlatform/cloudml-samples.git
+</code><button class="button button--copy js-copy-button-10"><i class="fa fa-clipboard"></i></button></pre>
+<p>Navigate to the <code>cloudml-samples</code> &gt; <code>census</code> &gt; <code>estimator</code> directory. The commands in this lab must be run from the <code>estimator</code> directory:</p>
+<pre><code>cd cloudml-samples/census/estimator
+</code><button class="button button--copy js-copy-button-11"><i class="fa fa-clipboard"></i></button></pre>
+<p>Your current directory should now be: <code>~/cloudml-samples/census/estimator</code>.</p>
+<p>The model that you'll use is in this directory, so stay inside it for the duration of the lab.</p>
+<aside class="special"><strong>Note: </strong><p>It's not necessary to look at the Python code to run this lab, but if you are interested, you can poke around the repo in the Cloud Shell editor.</p>
+</aside>
+<h2 id="step6">Develop and validate your training application locally</h2>
+<p>Before you run your training application in the cloud, get it running locally. Local environments provide an efficient development and validation workflow so that you can iterate quickly. You also won't incur charges for cloud resources when debugging your application locally.</p>
+<h3>Get your training data</h3>
+<p>The relevant data files, <code>adult.data</code> and <code>adult.test</code>, are hosted in a public Google Cloud Storage bucket.</p>
+<p>You can read the files directly from Cloud Storage or copy them to your local environment. For this lab you will download the samples for local training, and later upload them to your own Cloud Storage bucket for cloud training.</p>
+<p>Run the following command to download the data to a local file directory and set variables that point to the downloaded data files:</p>
+<pre><code>mkdir data
+gsutil -m cp gs://cloud-samples-data/ml-engine/census/data/* data/
+</code><button class="button button--copy js-copy-button-12"><i class="fa fa-clipboard"></i></button></pre>
+<p>Now set the <code>TRAIN_DATA</code> and <code>EVAL_DATA</code> variables to your local file paths by running the following commands:</p>
+<pre><code>export TRAIN_DATA=$(pwd)/data/adult.data.csv
+export EVAL_DATA=$(pwd)/data/adult.test.csv
+</code><button class="button button--copy js-copy-button-13"><i class="fa fa-clipboard"></i></button></pre>
+<p>To open the <code>adult.data.csv</code> file, run the following command:</p>
+<pre><code>head data/adult.data.csv
+</code><button class="button button--copy js-copy-button-14"><i class="fa fa-clipboard"></i></button></pre>
+<p>You will see that the data is stored in comma-separated value format that resembles the following:</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="lit">39</span><span class="pun">,</span><span class="pln"> </span><span class="typ">State</span><span class="pun">-</span><span class="pln">gov</span><span class="pun">,</span><span class="pln"> </span><span class="lit">77516</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Bachelors</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Never</span><span class="pun">-</span><span class="pln">married</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Adm</span><span class="pun">-</span><span class="pln">clerical</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Not</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">-</span><span class="pln">family</span><span class="pun">,</span><span class="pln"> </span><span class="typ">White</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Male</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2174</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln"> </span><span class="typ">United</span><span class="pun">-</span><span class="typ">States</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&lt;=</span><span class="lit">50K</span><span class="pln">
+</span><span class="lit">50</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Self</span><span class="pun">-</span><span class="pln">emp</span><span class="pun">-</span><span class="pln">not</span><span class="pun">-</span><span class="pln">inc</span><span class="pun">,</span><span class="pln"> </span><span class="lit">83311</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Bachelors</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Married</span><span class="pun">-</span><span class="pln">civ</span><span class="pun">-</span><span class="pln">spouse</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Exec</span><span class="pun">-</span><span class="pln">managerial</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Husband</span><span class="pun">,</span><span class="pln"> </span><span class="typ">White</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Male</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">13</span><span class="pun">,</span><span class="pln"> </span><span class="typ">United</span><span class="pun">-</span><span class="typ">States</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&lt;=</span><span class="lit">50K</span><span class="pln">
+</span><span class="lit">38</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Private</span><span class="pun">,</span><span class="pln"> </span><span class="lit">215646</span><span class="pun">,</span><span class="pln"> HS</span><span class="pun">-</span><span class="pln">grad</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Divorced</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Handlers</span><span class="pun">-</span><span class="pln">cleaners</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Not</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">-</span><span class="pln">family</span><span class="pun">,</span><span class="pln"> </span><span class="typ">White</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Male</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln"> </span><span class="typ">United</span><span class="pun">-</span><span class="typ">States</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&lt;=</span><span class="lit">50K</span><span class="pln">
+</span><span class="lit">53</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Private</span><span class="pun">,</span><span class="pln"> </span><span class="lit">234721</span><span class="pun">,</span><span class="pln"> </span><span class="lit">11th</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Married</span><span class="pun">-</span><span class="pln">civ</span><span class="pun">-</span><span class="pln">spouse</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Handlers</span><span class="pun">-</span><span class="pln">cleaners</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Husband</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Black</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Male</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln"> </span><span class="typ">United</span><span class="pun">-</span><span class="typ">States</span><span class="pun">,</span><span class="pln"> </span><span class="pun">&lt;=</span><span class="lit">50K</span><span class="pln">
+</span><span class="pun">...</span></code><button class="button button--copy js-copy-button-15"><i class="fa fa-clipboard"></i></button></pre>
+<p>Now that you have downloaded and inspected your training data, you will install the necessary dependencies.</p>
+<h2 id="step7">Install dependencies</h2>
+<p>Although TensorFlow is installed on Cloud Shell, you must run the sample's <code>requirements.txt</code> file to ensure you are using the same version of TensorFlow required by the sample:</p>
+<pre><code>pip install -r ../requirements.txt
+</code><button class="button button--copy js-copy-button-16"><i class="fa fa-clipboard"></i></button></pre>
+<p>It will take a couple minutes for this command to complete. You will receive a similar output when it does:</p>
+<pre><code class="language-output prettyprint prettyprinted" style=""><span class="typ">Successfully</span><span class="pln"> installed </span><span class="typ">Keras</span><span class="pun">-</span><span class="lit">2.3</span><span class="pun">.</span><span class="lit">1</span><span class="pln"> absl</span><span class="pun">-</span><span class="pln">py</span><span class="pun">-</span><span class="lit">0.8</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> astor</span><span class="pun">-</span><span class="lit">0.8</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> future</span><span class="pun">-</span><span class="lit">0.16</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> gast</span><span class="pun">-</span><span class="lit">0.3</span><span class="pun">.</span><span class="lit">2</span><span class="pln"> google</span><span class="pun">-</span><span class="pln">pasta</span><span class="pun">-</span><span class="lit">0.1</span><span class="pun">.</span><span class="lit">7</span><span class="pln"> grpcio</span><span class="pun">-</span><span class="lit">1.24</span><span class="pun">.</span><span class="lit">1</span><span class="pln"> h5py</span><span class="pun">-</span><span class="lit">2.10</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> keras</span><span class="pun">-</span><span class="pln">applications</span><span class="pun">-</span><span class="lit">1.0</span><span class="pun">.</span><span class="lit">8</span><span class="pln"> keras</span><span class="pun">-</span><span class="pln">preprocessing</span><span class="pun">-</span><span class="lit">1.1</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> markdown</span><span class="pun">-</span><span class="lit">3.1</span><span class="pun">.</span><span class="lit">1</span><span class="pln"> numexpr</span><span class="pun">-</span><span class="lit">2.7</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> numpy</span><span class="pun">-</span><span class="lit">1.17</span><span class="pun">.</span><span class="lit">2</span><span class="pln"> pandas</span><span class="pun">-</span><span class="lit">0.25</span><span class="pun">.</span><span class="lit">1</span><span class="pln"> protobuf</span><span class="pun">-</span><span class="lit">3.10</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> python</span><span class="pun">-</span><span class="pln">dateutil</span><span class="pun">-</span><span class="lit">2.8</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> pytz</span><span class="pun">-</span><span class="lit">2019.3</span><span class="pln"> pyyaml</span><span class="pun">-</span><span class="lit">5.1</span><span class="pun">.</span><span class="lit">2</span><span class="pln"> scipy</span><span class="pun">-</span><span class="lit">1.3</span><span class="pun">.</span><span class="lit">1</span><span class="pln"> six</span><span class="pun">-</span><span class="lit">1.12</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> tensorboard</span><span class="pun">-</span><span class="lit">1.14</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> tensorflow</span><span class="pun">-</span><span class="lit">1.14</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> tensorflow</span><span class="pun">-</span><span class="pln">estimator</span><span class="pun">-</span><span class="lit">1.14</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> termcolor</span><span class="pun">-</span><span class="lit">1.1</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> werkzeug</span><span class="pun">-</span><span class="lit">0.16</span><span class="pun">.</span><span class="lit">0</span><span class="pln"> wrapt</span><span class="pun">-</span><span class="lit">1.11</span><span class="pun">.</span><span class="lit">2</span></code><button class="button button--copy js-copy-button-17"><i class="fa fa-clipboard"></i></button></pre>
+<p>Verify the installation:</p>
+<pre><code>python -c "import tensorflow as tf; print('TensorFlow version {} is installed.'.format(tf.__version__))"
+</code><button class="button button--copy js-copy-button-18"><i class="fa fa-clipboard"></i></button></pre>
+<p>You can ignore any warnings that the TensorFlow library wasn't compiled to use certain instructions.</p>
+<h2 id="step8">Run a local training job</h2>
+<p>A local training job loads your Python training program and starts a training process in an environment that's similar to that of a live Cloud AI Platform cloud training job.</p>
+<p>Specify an output directory and set a <code>MODEL_DIR</code> variable by running the following command:</p>
+<pre><code>export MODEL_DIR=output
+</code><button class="button button--copy js-copy-button-19"><i class="fa fa-clipboard"></i></button></pre>
+<p>Run this training job locally by running the following command:</p>
+<pre><code>gcloud ai-platform local train \
+    --module-name trainer.task \
+    --package-path trainer/ \
+    --job-dir $MODEL_DIR \
+    -- \
+    --train-files $TRAIN_DATA \
+    --eval-files $EVAL_DATA \
+    --train-steps 1000 \
+    --eval-steps 100
+</code><button class="button button--copy js-copy-button-20"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><strong>Note: </strong><p>When you run the same training job on AI Platfrom later in the lab, you'll see that the command is not much different from the above.</p>
+</aside>
+<p>By default, verbose logging is turned off. You can enable it by setting the <code>--verbosity</code> tag to <code>DEBUG</code>. A later example shows you how to enable it.</p>
+<h3>Inspect the summary logs using Tensorboard</h3>
+<p>To see the evaluation results, you can use the visualization tool called  <a href="https://www.tensorflow.org/programmers_guide/summaries_and_tensorboard">TensorBoard</a>. With TensorBoard, you can visualize your TensorFlow graph, plot quantitative metrics about the execution of your graph, and show additional data like images that pass through the graph. Tensorboard is available as part of the TensorFlow installation.</p>
+<p>Follow the steps below to launch TensorBoard and point it at the summary logs produced during training, both during and after execution.</p>
+<p>Launch TensorBoard:</p>
+<pre><code>tensorboard --logdir=$MODEL_DIR --port=8080
+</code><button class="button button--copy js-copy-button-21"><i class="fa fa-clipboard"></i></button></pre>
+<p>Click on the <strong>Web Preview</strong> icon, then <strong>Preview on port 8080</strong>. A new tab will open with TensorBoard running.</p>
+<p><img alt="bde9fe42e27656fb.png" src="./AI Platform_ Qwik Start _ Qwiklabs_files/a6YnJv8GlGae4rnJIbjA27J8c7YApa+6noPFkkKxZjk="></p>
+<p>Click on <strong>Accuracy</strong> to see graphical representations of how accuracy changes as your job progresses.</p>
+<p>Type <code>CTRL+C</code> in Cloud Shell to shut down TensorBoard.</p>
+<p>The output/export/census directory holds the model exported as a result of running training locally. List that directory to see the generated timestamp subdirectory:</p>
+<pre><code>ls output/export/census/
+</code><button class="button button--copy js-copy-button-22"><i class="fa fa-clipboard"></i></button></pre>
+<p>You should receive a similar output:</p>
+<pre><code>1547669983
+</code><button class="button button--copy js-copy-button-23"><i class="fa fa-clipboard"></i></button></pre>
+<p>Copy the timestamp that was generated.</p>
+<p>Run the following command in Cloud Shell, replacing <code>&lt;timestamp&gt;</code> with your timestamp:</p>
+<pre><code>gcloud ai-platform local predict \
+--model-dir output/export/census/&lt;timestamp&gt; \
+--json-instances ../test.json
+</code><button class="button button--copy js-copy-button-24"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p><strong>Note: </strong>If you get <strong>RuntimeError: Bad magic number in .pyc file</strong> run the command <code>sudo rm -rf /google/google-cloud-sdk/lib/googlecloudsdk/command_lib/ml_engine/*.pyc</code> and re-run the above command again.</p>
+</aside>
+<p>You should see a result that looks something like the following:</p>
+<pre><code>
+CLASS_IDS  CLASSES  LOGISTIC              LOGITS                PROBABILITIES
+[0]        [u'0']   [0.0583675391972065]  [-2.780855178833008]  [0.9416324496269226, 0.0583675354719162]
+</code><button class="button button--copy js-copy-button-25"><i class="fa fa-clipboard"></i></button></pre>
+<p>Where class 0 means income &lt;= 50k and class 1 means income &gt;50k.</p>
+<h2 id="step9">Use your trained model for prediction</h2>
+<p>Once you've trained your TensorFlow model, you can use it for prediction on new data.  In this case, you've trained a census model to predict income category given some information about a person.</p>
+<p>For this section we'll use a predefined prediction request file, <code>test.json</code>, included in the GitHub repository in the <code>census</code> directory. You can inspect the JSON file in the Cloud Shell editor if you're interested in learning more.</p>
+<h2 id="step10">Run your training job in the cloud</h2>
+<p>Now that you've validated your model by running it locally, you will now get practice training in using AI Platform. You'll remain in the Cloud Shell for this section.</p>
+<aside class="special"><p><strong>Note: </strong>The initial job request will take several minutes to start, but subsequent jobs run more quickly. This enables quick iteration as you develop and validate your training job.</p>
+</aside>
+<h3>Set up a Google Cloud Storage bucket</h3>
+<p>The AI Platform services need to access <a href="https://cloud.google.com/storage/">Google Cloud Storage</a> (GCS) to read and write data during model training and batch prediction.</p>
+<p>First, set the following variables:</p>
+<pre><code>PROJECT_ID=$(gcloud config list project --format "value(core.project)")
+BUCKET_NAME=${PROJECT_ID}-mlengine
+echo $BUCKET_NAME
+REGION=us-central1
+</code><button class="button button--copy js-copy-button-26"><i class="fa fa-clipboard"></i></button></pre>
+<p>Create the new bucket:</p>
+<pre><code>gsutil mb -l $REGION gs://$BUCKET_NAME
+</code><button class="button button--copy js-copy-button-27"><i class="fa fa-clipboard"></i></button></pre>
+<h3>Test Completed Task</h3>
+<p>Click <strong>Check my progress</strong> to verify your performed task.</p>
+<ql-activity-tracking step="1">
+    Set up a Google Cloud Storage bucket.
+</ql-activity-tracking>
+<p>Upload the data files to your Cloud Storage bucket.</p>
+<p>Use <code>gsutil</code> to copy the two files to your Cloud Storage bucket:</p>
+<pre><code>gsutil cp -r data gs://$BUCKET_NAME/data
+</code><button class="button button--copy js-copy-button-28"><i class="fa fa-clipboard"></i></button></pre>
+<p>Set the TRAIN_DATA and EVAL_DATA variables to point to the files:</p>
+<pre><code>TRAIN_DATA=gs://$BUCKET_NAME/data/adult.data.csv
+EVAL_DATA=gs://$BUCKET_NAME/data/adult.test.csv
+</code><button class="button button--copy js-copy-button-29"><i class="fa fa-clipboard"></i></button></pre>
+<p>Use <code>gsutil</code> again to copy the JSON test file <code>test.json</code> to your Cloud Storage bucket:</p>
+<pre><code>gsutil cp ../test.json gs://$BUCKET_NAME/data/test.json
+</code><button class="button button--copy js-copy-button-30"><i class="fa fa-clipboard"></i></button></pre>
+<p>Set the <code>TEST_JSON</code> variable to point to that file:</p>
+<pre><code>TEST_JSON=gs://$BUCKET_NAME/data/test.json
+</code><button class="button button--copy js-copy-button-31"><i class="fa fa-clipboard"></i></button></pre>
+<h3>Test Completed Task</h3>
+<p>Click <strong>Check my progress</strong> to verify your performed task.</p>
+<ql-activity-tracking step="2">
+    Upload the data files to your Cloud Storage bucket.
+</ql-activity-tracking>
+<h2 id="step11">Run a single-instance trainer in the cloud</h2>
+<p>With a validated training job that runs in both single-instance and distributed mode, you're now ready to run a training job in the cloud. You'll start by requesting a single-instance training job.</p>
+<p>Use the default BASIC scale tier to run a single-instance training job. The initial job request can take a few minutes to start, but subsequent jobs run more quickly. This enables quick iteration as you develop and validate your training job.</p>
+<p>Select a name for the initial training run that distinguishes it from any subsequent training runs. For example, you can append a number to represent the iteration:</p>
+<pre><code>JOB_NAME=census_single_1
+</code><button class="button button--copy js-copy-button-32"><i class="fa fa-clipboard"></i></button></pre>
+<p>Specify a directory for output generated by AI Platform by setting an OUTPUT_PATH variable to include when requesting training and prediction jobs. The OUTPUT_PATH represents the fully qualified Cloud Storage location for model checkpoints, summaries, and exports. You can use the BUCKET_NAME variable you defined in a previous step. It's a good practice to use the job name as the output directory:</p>
+<pre><code>OUTPUT_PATH=gs://$BUCKET_NAME/$JOB_NAME
+</code><button class="button button--copy js-copy-button-33"><i class="fa fa-clipboard"></i></button></pre>
+<p>Run the following command to submit a training job in the cloud that uses a single process. This time, set the <code>--verbosity</code> tag to <code>DEBUG</code> so that you can inspect the full logging output and retrieve accuracy, loss, and other metrics. The output also contains a number of other warning messages that you can ignore for the purposes of this sample:</p>
+<pre><code>gcloud ai-platform jobs submit training $JOB_NAME \
+    --job-dir $OUTPUT_PATH \
+    --runtime-version 1.14 \
+    --python-version 3.5 \
+    --module-name trainer.task \
+    --package-path trainer/ \
+    --region $REGION \
+    -- \
+    --train-files $TRAIN_DATA \
+    --eval-files $EVAL_DATA \
+    --train-steps 1000 \
+    --eval-steps 100 \
+    --verbosity DEBUG
+</code><button class="button button--copy js-copy-button-34"><i class="fa fa-clipboard"></i></button></pre>
+<p>You can monitor the progress of your training job by watching the logs on the command line:</p>
+<pre><code>gcloud ai-platform jobs stream-logs $JOB_NAME
+</code><button class="button button--copy js-copy-button-35"><i class="fa fa-clipboard"></i></button></pre>
+<p>Or monitor in the Console: <strong>AI Platform</strong> &gt; <strong>Jobs</strong>.</p>
+<h3>Test Completed Task</h3>
+<p>Click <strong>Check my progress</strong> to verify your performed task.</p>
+<ql-activity-tracking step="3">
+    Run a single-instance trainer in the cloud.
+</ql-activity-tracking>
+<h3>Inspect the output</h3>
+<p>If you have been monitoring the job in Cloud Shell, you will know you're done when your output resembles the following:</p>
+<pre><code>INFO    2019-01-16 12:58:34 -0800     master-replica-0      Task completed successfully.
+</code><button class="button button--copy js-copy-button-36"><i class="fa fa-clipboard"></i></button></pre>
+<p>In cloud training, outputs are produced in Cloud Storage. In this sample, outputs are saved to <code>OUTPUT_PATH</code>; to list them, run:</p>
+<pre><code>gsutil ls -r $OUTPUT_PATH
+</code><button class="button button--copy js-copy-button-37"><i class="fa fa-clipboard"></i></button></pre>
+<p>The outputs should be similar to the outputs from training locally (above).</p>
+<p><strong>Optional:</strong> You can point TensorBoard to this directory, either during or after training using the <strong>Web Preview</strong> menu at the top of the Cloud Shell and again select <strong>Preview on port 8080</strong>:</p>
+<pre><code>tensorboard --logdir=$OUTPUT_PATH --port=8080
+</code><button class="button button--copy js-copy-button-38"><i class="fa fa-clipboard"></i></button></pre>
+<p>You can shut down TensorBoard by typing <strong>ctrl</strong> + <strong>c</strong> on the command line.</p>
+<h2 id="step12">Deploy your model to support prediction</h2>
+<p>By deploying your trained model to AI Platform to serve online prediction requests, you get the benefit of scalable serving. This is useful if you expect your trained model to be hit with many prediction requests in a short period of time.</p>
+<p>Wait until your AI Platform training job is done. It is finished when you see a green check mark by the jobname in the Cloud Console, or when you see the message <strong>Job completed successfully</strong>  in the Cloud Shell command line.</p>
+<p>Create an AI Platform model:</p>
+<pre><code>MODEL_NAME=census
+</code><button class="button button--copy js-copy-button-39"><i class="fa fa-clipboard"></i></button></pre>
+<p>Create an AI Platform model:</p>
+<pre><code>gcloud ai-platform models create $MODEL_NAME --regions=$REGION
+</code><button class="button button--copy js-copy-button-40"><i class="fa fa-clipboard"></i></button></pre>
+<h3>Test Completed Task</h3>
+<p>Click <strong>Check my progress</strong> to verify your performed task.</p>
+<ql-activity-tracking step="4">
+    Create an AI Platform model.
+</ql-activity-tracking>
+<p>Select the exported model to use, by looking up the full path of your exported trained model binaries.</p>
+<pre><code>gsutil ls -r $OUTPUT_PATH/export
+</code><button class="button button--copy js-copy-button-41"><i class="fa fa-clipboard"></i></button></pre>
+<p>Scroll through the output to find the value of <code>$OUTPUT_PATH/export/census/&lt;timestamp&gt;/</code>. Copy timestamp and add it to the following command to set the environment variable <code>MODEL_BINARIES</code> to its value:</p>
+<pre><code>MODEL_BINARIES=$OUTPUT_PATH/export/census/&lt;timestamp&gt;/
+</code><button class="button button--copy js-copy-button-42"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p><strong>Note: </strong>The timestamp for this training run will not be the same as the timestamp generated during your local training run above. Be sure to scroll through the <code>gsutil ls</code> output to find this new timestamp.</p>
+</aside>
+<p>You'll deploy this trained model.</p>
+<p>Run the following command to create a version <code>v1</code> of your model:</p>
+<pre><code>gcloud ai-platform versions create v1 \
+--model $MODEL_NAME \
+--origin $MODEL_BINARIES \
+--runtime-version 1.14 \
+--python-version 3.5
+</code><button class="button button--copy js-copy-button-43"><i class="fa fa-clipboard"></i></button></pre>
+<h3>Test Completed Task</h3>
+<p>Click <strong>Check my progress</strong> to verify your performed task.</p>
+<ql-activity-tracking step="5">
+    Create a version v1 of your model.
+</ql-activity-tracking>
+<p>It may take several minutes to deploy your trained model. When done, you can see a list of your models using the <code>models list</code> command:</p>
+<pre><code>gcloud ai-platform models list
+</code><button class="button button--copy js-copy-button-44"><i class="fa fa-clipboard"></i></button></pre>
+<h3>Send an online prediction request to your deployed model</h3>
+<p>You can now send prediction requests to your deployed model. The following command sends a prediction request using the <code>test.json</code> file included in the GitHub repository.</p>
+<pre><code>gcloud ai-platform predict \
+--model $MODEL_NAME \
+--version v1 \
+--json-instances ../test.json
+</code><button class="button button--copy js-copy-button-45"><i class="fa fa-clipboard"></i></button></pre>
+<p>The response includes the probabilities of each label (<strong>&gt;50K</strong> and <strong>&lt;=50K</strong>) based on the data entry in test.json, thus indicating whether the predicted income is greater than or less than 50,000 dollars</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">CLASS_IDS  CLASSES  LOGISTIC               LOGITS                PROBABILITIES
+</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln">        </span><span class="pun">[</span><span class="pln">u</span><span class="str">'0'</span><span class="pun">]</span><span class="pln">   </span><span class="pun">[</span><span class="lit">0.06142739951610565</span><span class="pun">]</span><span class="pln">  </span><span class="pun">[-</span><span class="lit">2.726504325866699</span><span class="pun">]</span><span class="pln">  </span><span class="pun">[</span><span class="lit">0.9385725855827332</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.061427392065525055</span><span class="pun">]</span></code><button class="button button--copy js-copy-button-46"><i class="fa fa-clipboard"></i></button></pre>
+<p>Where class <code>0</code> means <em>income &lt;= 50k</em> and class <code>1</code> means <em>income &gt;50k</em>.</p>
+<aside class="special"><p><strong>Note:</strong> AI PLatform supports batch prediction too, but it's not included in this lab. See the documentation for more info.</p>
+</aside>
+<h2 id="step13">Test your Understanding</h2>
+<p>Below are a multiple choice questions to reinforce your understanding of this lab's concepts. Answer them to the best of your abilities.</p>
+<ql-true-false-probe answer="true" stem="A model version is an instance of a machine learning solution stored in the AI Platform model service.">
+</ql-true-false-probe>
+<ql-true-false-probe answer="true" stem="AI Platform offers training jobs and batch prediction jobs.">
+</ql-true-false-probe>
+<h2 id="step14">Congratulations!</h2>
+<p>In this lab, you've learned how to train a  <a href="http://tensorflow.org/">TensorFlow</a> model both locally and on <a href="https://cloud.google.com/ml-engine/docs/">AI Platform</a>, and then how to use your trained model for prediction.</p>
+<h4><strong>Finish your quest</strong></h4>
+<p><img alt="38616f8aa634e047.png" src="./AI Platform_ Qwik Start _ Qwiklabs_files/IApG9d_XIEgLgs087RvzuRMv2SCAHo6owBXVZUfyhtQ=">
+<img alt="c5c398f6ade6aa06.png" src="./AI Platform_ Qwik Start _ Qwiklabs_files/nDmcgFkNYGli8iG0ElXcQj7AfYRk_EpZ4MaCgRfGiew=">
+<img alt="ML-Language-Processing-badge" src="./AI Platform_ Qwik Start _ Qwiklabs_files/p0e3nYdVoP28Hx+rlEQ+qbIeIdfMo8F0cLaDFl5e2dE=">
+<img alt="ML-Image-Processing-badge.png" src="./AI Platform_ Qwik Start _ Qwiklabs_files/RGK1oeQbB4Lh3nZadxyeMRveRZuO8WQMNCDyzomMKMM="></p>
+<p>This self-paced lab is part of the Qwiklabs Quests <a href="https://google.qwiklabs.com/quests/32">Machine Learning APIs</a>,  <a href="https://google.qwiklabs.com/quests/34">Baseline: Data, ML, AI</a>, <a href="https://google.qwiklabs.com/quests/82">Intro to ML: Language Processing</a> and <a href="https://google.qwiklabs.com/quests/85">Intro to ML: Image Processing</a>. A Quest is a series of related labs that form a learning path. Completing a Quest earns you a badge to recognize your achievement. You can make your badge (or badges) public and link to them in your online resume or social media account.  Enroll in a Quest and get immediate completion credit if you've taken this lab.  <a href="http://google.qwiklabs.com/catalog">See other available Qwiklabs Quests</a>.</p>
+<h3><strong>Take your next lab</strong></h3>
+<p>Try out another lab on Machine Learning APIs, like <a href="https://google.qwiklabs.com/catalog_lab/1111">Extract, Analyze, and Translate Text from Images with the Cloud ML APIs</a> or <a href="https://google.qwiklabs.com/catalog_lab/1041">Awwvision: Cloud Vision API from a Kubernetes Cluster</a>.</p>
+<p>This lab is also part of a series of labs called Qwik Starts. These labs are designed to give you a little taste of the many features available with Google Cloud. Search for "Qwik Starts" in the <a href="https://google.qwiklabs.com/catalog">lab catalog</a> to find the next lab you'd like to take!</p>
+<h3><strong>Next steps</strong></h3>
+<ul>
+<li>Sign up for the full  <a href="https://www.coursera.org/learn/serverless-machine-learning-gcp/">Coursera Course on Machine Learning</a>.</li>
+<li>Learn more about  <a href="https://www.tensorflow.org/tutorials/wide_and_deep">TensorFlow Wide &amp; Deep</a>
+</li>
+<li>You can read more about wide and deep models in the Google Research Blog post named <a href="https://ai.googleblog.com/2016/06/wide-deep-learning-better-together-with.html">Wide &amp; Deep Learning: Better Together with TensorFlow</a>.</li>
+<li>Get your  <a href="https://www.tensorflow.org/install/">own version of Tensorflow</a>.</li>
+</ul>
+<h3>Google Cloud Training &amp; Certification</h3>
+<p>...helps you make the most of Google Cloud technologies. <a href="https://cloud.google.com/training/courses">Our classes</a> include technical skills and best practices to help you get up to speed quickly and continue your learning journey. We offer fundamental to advanced level training, with on-demand, live, and virtual options to suit your busy schedule. <a href="https://cloud.google.com/certification/">Certifications</a> help you validate and prove your skill and expertise in Google Cloud technologies.</p>
+
+<h5>Manual Last Updated: October 21, 2019</h5>
+<h5>Lab Last Tested: October 21, 2019</h5>
+<p>Copyright 2019 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+
+
+
+</div>
+<div class="js-lab-content-outline lab-content__outline is-stuck">
+<a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step1" class="">GSP076</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step2" class="">Overview</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step3" class="is-active">Setup and Requirements</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step4">Create a virtual environment</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step5">Clone the example repo</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step6">Develop and validate your training application locally</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step7">Install dependencies</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step8">Run a local training job</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step9">Use your trained model for prediction</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step10">Run your training job in the cloud</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step11">Run a single-instance trainer in the cloud</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step12">Deploy your model to support prediction</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step13">Test your Understanding</a><a href="https://google.qwiklabs.com/focuses/581?parent=catalog&amp;qlcampaign=1s-seattle-8293#step14">Congratulations!</a>
+</div>
+</div>
+
+</div>
+
+<div class="lab-content__markdown-wrapper">
+<div class="lab-content__markdown">
+<div class="lab-content__recommendation">
+<!-- # TODO: Change classes so that this doesn't stack vertically -->
+<section class="upcoming-cards">
+<h2 class="headline-3">Continue questing</h2>
+<div class="content-card-grid">
+<div class="card-content-wrapper js-content-card" data-id="1241" data-level="Introductory" data-name="APIs Explorer: Qwik Start" data-type="Lab">
+<a class="card card--content elevation-0 content-lab" href="https://google.qwiklabs.com/focuses/2457?parent=catalog&amp;qlcampaign=1s-seattle-8293"><div class="card__image">
+<div class="card__image__inner" style="background-image: url(https://cdn.qwiklabs.com/assets/fractal2-a4905334374c9d90765c63535f0fc66eb81d5f18f7416db5bea58901744cc5d0.jpg)"></div>
+</div>
+<div class="card__body">
+<div class="overline card--content__type">
+Hands-On Lab
+</div>
+<h3 class="card--content__title">
+APIs Explorer: Qwik Start
+</h3>
+<p class="card--content__description body-1">
+In this lab you'll upload an image to Cloud Storage then make a request to the Vision API with APIs Explorer.
+</p>
+</div>
+<div class="card__footer">
+<div class="card__footer__left">
+<span>Introductory</span>
+</div>
+<div class="card__footer__right">
+<div class="rateit" data-rateit-readonly="true" data-rateit-value="4.3749"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 69.9984px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+</div>
+</div>
+</a></div>
+
+</div>
+</section>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="lab-assessment__tab js-lab-assessment-tab">
+<h5 class="small-label">
+Score
+</h5>
+<h3 class="js-lab-assessment-total-score">
+—/100
+</h3>
+<iframe class="l-ie-iframe-fix" src="./AI Platform_ Qwik Start _ Qwiklabs_files/saved_resource(1).html"></iframe>
+</div>
+<div class="lab-assessment__panel js-lab-assessment-panel">
+<!-- / If lab_instance has is started and assessment is generated, use -->
+<!-- / lab_instance.assessment, otherwise use lab.assessment_manual -->
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Set up a Google Cloud Storage bucket
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="1">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-1">
+</span>
+/ 20
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Upload the data files to your Cloud Storage bucket
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="2">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-2">
+</span>
+/ 20
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Run a single-instance trainer in the cloud
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="3">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-3">
+</span>
+/ 20
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Create a Cloud ML Engine model
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="4">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-4">
+</span>
+/ 20
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Create a version v1 of your model
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="5">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-5">
+</span>
+/ 20
+</p>
+</div>
+
+<iframe class="l-ie-iframe-fix" src="./AI Platform_ Qwik Start _ Qwiklabs_files/saved_resource(2).html"></iframe>
+</div>
+<div class="lab-introduction js-lab-introduction is-hidden">
+<div class="lab-introduction__inner">
+<h1 class="headline-1">Welcome to Your First Lab!</h1>
+<ql-icon-button class="js-skip-button">close</ql-icon-button>
+<div class="lab-introduction__video">
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" id="lab-introduction" src="./AI Platform_ Qwik Start _ Qwiklabs_files/yF7EDXKTmoQ.html"></iframe>
+</div>
+<a class="js-skip-button button button--outline">Skip this video</a>
+</div>
+</div>
+
+
+
+</div>
+</main>
+<div class="modal fade" id="lab-details-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<div class="modal-body">
+<p class="l-mbm">
+In this lab you train and deploy a TensorFlow model to AI Platform for serving (prediction).  Watch these short videos <a href="https://youtu.be/m0rqccviLNM">Harness the Power of Machine Learning with AI Platform</a> and <a href="https://youtu.be/ZhQK0glTLg0">AI Platform: Qwik Start - Qwiklabs Preview</a>.
+</p>
+<p>
+This lab is included in these quests:
+<a href="https://google.qwiklabs.com/quests/82?qlcampaign=1s-seattle-8293">Intro to ML: Language Processing</a>, <a href="https://google.qwiklabs.com/quests/85?qlcampaign=1s-seattle-8293">Intro to ML: Image Processing</a>, <a href="https://google.qwiklabs.com/quests/34?qlcampaign=1s-seattle-8293">Baseline: Data, ML, AI</a>, <a href="https://google.qwiklabs.com/quests/32?qlcampaign=1s-seattle-8293">Machine Learning APIs</a>.
+If you complete this lab you'll receive credit for it when you enroll in one of these quests.
+</p>
+<p class="small-label l-mbs">
+<strong>
+Duration:
+</strong>
+0m setup
+·
+60m access
+·
+60m completion
+</p>
+<p class="small-label l-mbs">
+<span><strong>Levels: </strong>introductory</span>
+</p>
+<p class="small-label">
+<strong>
+Permalink:
+</strong>
+<a href="https://google.qwiklabs.com/catalog_lab/676">https://google.qwiklabs.com/catalog_lab/676</a>
+</p>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Got It
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./AI Platform_ Qwik Start _ Qwiklabs_files/saved_resource(3).html"></iframe>
+</div>
+<div class="modal fade" id="lab-review-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="https://google.qwiklabs.com/lab_reviews?qlcampaign=1s-seattle-8293" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><div class="modal-body">
+<p class="label">
+How satisfied are you with this lab?*
+</p>
+<div class="rateit js-rateit" data-rateit-max="5" data-rateit-min="0" data-rateit-resetable="false" data-rateit-step="1" data-rateit-value="0"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 0px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+<div class="l-mtm">
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" type="hidden" value="2249714" name="lab_review[user_id]" id="lab_review_user_id"></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" type="hidden" name="lab_review[classroom_id]" id="lab_review_classroom_id"></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" type="hidden" value="676" name="lab_review[lab_id]" id="lab_review_lab_id"></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" type="hidden" name="lab_review[focus_id]" id="lab_review_focus_id"></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" type="hidden" name="lab_review[rating]" id="lab_review_rating"></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Comment</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment"></textarea></div></div>
+</div>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Cancel
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<input type="submit" name="commit" value="Submit" disabled="disabled" class="btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="submit" data-disabled="false" data-disable-with="Submit" data-upgraded=",MaterialButton,MaterialRipple"><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></input>
+</div>
+</form>
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./AI Platform_ Qwik Start _ Qwiklabs_files/saved_resource(4).html"></iframe>
+</div>
+<div class="modal fade" id="lab-access-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<a class="lab-access-modal-close" data-dismiss="modal">
+<i class="material-icons">close</i>
+</a>
+<form class="js-lab-access-form" action="https://google.qwiklabs.com/lab_onetime_coupons/activate?parent=catalog&amp;qlcampaign=1s-seattle-8293" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
+<div class="modal-body">
+<div class="lab-access-modal">
+<input type="hidden" name="id" id="id" value="581">
+<input type="hidden" name="user_id" id="user_id" value="2249714">
+<input type="hidden" name="launch_with_credits" id="launch_with_credits" value="0" class="js-launch-with-credits-input">
+<input type="hidden" name="launch_with_subs" id="launch_with_subs" value="0" class="js-launch-with-subscription-input">
+<div class="lab-access-modal__method">
+<p>
+This lab costs
+1 Credit.
+</p>
+<p>
+You have a valid subscription package. Would you like to charge this lab to your subscription?
+
+</p>
+<a class="button js-launch-with-subscription-button js-lab-access-modal-button">
+Use Subscription
+</a>
+</div>
+<div class="lab-access-modal__method">
+<p>
+Enter Lab Access Code:
+</p>
+<div class="lab-access-modal__code js-access-code">
+<input type="text" name="uuid_1" id="uuid_1" value="" maxlength="4" placeholder="1234">
+<input type="text" name="uuid_2" id="uuid_2" value="" maxlength="4" placeholder="1234">
+<input type="text" name="uuid_3" id="uuid_3" value="" maxlength="4" placeholder="1234">
+<input type="text" name="uuid_4" id="uuid_4" value="" maxlength="4" placeholder="1234">
+</div>
+<a class="button js-launch-with-access-code-button js-lab-access-modal-button">
+Launch with Access Code
+</a>
+</div>
+</div>
+</div>
+</form>
+
+
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./AI Platform_ Qwik Start _ Qwiklabs_files/saved_resource(5).html"></iframe>
+</div>
+
+<script>
+  $( function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    initLabContent( );
+  ql.labOutline.links.init();
+  ql.labOutline.layout.init();
+  initLabReviewModal();
+  initLabAccessModal();
+  ql.labAssessment.init();
+  ql.labIntroduction.init( true );
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?\n","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.\n","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.initHeader();
+  ql.navigation.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+<style>
+  .mdl-layout__container {
+    position: static
+  }
+</style>
+
+
+<iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="./AI Platform_ Qwik Start _ Qwiklabs_files/saved_resource(6).html" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div id="drift-widget-container" style="position: absolute; z-index: 2147483647;"><iframe id="drift-widget" src="./AI Platform_ Qwik Start _ Qwiklabs_files/index.html" title="Drift Messenger" role="complementary" style="border: none; display: block; height: 0px !important; width: 0px !important; position: fixed; top: auto; left: auto; bottom: 0px; right: 0px; visibility: hidden; z-index: 2147483647; max-height: 100vh; max-width: 100vw; transition: none 0s ease 0s; background: none transparent; opacity: 1; pointer-events: auto; touch-action: auto;" class="drift-widget-hidden"></iframe></div><div><iframe title="Opens a widget where you can chat to one of our agents" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: none; background: transparent; z-index: 999998; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 1; height: 50px; max-height: 551px; min-height: 50px; margin: 10px 20px; right: 0px; bottom: 0px; width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;width: 114px;" src="./AI Platform_ Qwik Start _ Qwiklabs_files/saved_resource(7).html"></iframe></div><div><iframe title="Find more information here" id="webWidget" tabindex="-1" class="zEWidget-webWidget " style="border: none; background: transparent; z-index: 999999; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 0; width: 357px; height: 100%; max-height: 565px; min-height: 150px; margin-left: 8px; margin-right: 8px; top: -9999px; visibility: hidden;" src="./AI Platform_ Qwik Start _ Qwiklabs_files/saved_resource(8).html"></iframe></div></body></html>
